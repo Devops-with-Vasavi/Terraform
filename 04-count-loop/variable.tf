@@ -22,7 +22,7 @@ variable "ami_id" {
 
 variable "instance_type" {
   type    = string
-  #default = "t3.micro"
+  default = "t3.micro"
 
   validation {
     condition     = contains(["t3.micro", "t3.small", "t3.medium", "t3.large"], var.instance_type)
