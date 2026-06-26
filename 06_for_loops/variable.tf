@@ -9,11 +9,6 @@ variable "project" {
   default = "roboshop"
 }
 
-variable "instances" {
-  type = list
-  default = ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
-}
-
 variable "ami_id" {
   type        = string
   default     = "ami-0220d79f3f480ecf5"
@@ -45,7 +40,7 @@ variable "cidr" {
   default = ["0.0.0.0/0"]
 }
 
-variable "instance" {
+variable "instances" {
   type = map
   default = {
     mongodb = {
