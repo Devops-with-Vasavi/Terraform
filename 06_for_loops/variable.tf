@@ -45,6 +45,28 @@ variable "cidr" {
   default = ["0.0.0.0/0"]
 }
 
+variable "instance" {
+  type = map
+  default = {
+    mongodb = {
+      "instance_type" = "t3.micro"
+    }
+    redis = {
+      "instance_type" = "t3.micro"
+    }
+    mysql = {
+      "instance_type" = "t3.micro"
+    }
+    rabbitmq = {
+      "instance_type" = "t3.micro"
+    }
+    
+   
+
+  }
+  
+  
+}
 variable "domain_name" {
   type =  string
   default = "mydaws.online"
